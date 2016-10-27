@@ -2,7 +2,7 @@
   "name": "expressjs",
   "main": "./lib/expressjs",
   "version": "0.1.1",
-  "description": "A short description of your package",
+  "description": "Collection of Expressjs snippets for Atom",
   "keywords": [
     "nodejs",
     "snippet",
