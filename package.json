@@ -3,7 +3,15 @@
   "main": "./lib/expressjs",
   "version": "0.1.0",
   "description": "A short description of your package",
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "snippet",
+    "javascript",
+    "express",
+    "expressjs"
+    "es6",
+    "node",
+  ],
   "activationCommands": {
     "atom-workspace": "expressjs:toggle"
   },
