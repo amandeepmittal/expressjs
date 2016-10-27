@@ -10,7 +10,7 @@
     "express",
     "expressjs",
     "es6",
-    "node",
+    "node"
   ],
   "activationCommands": {
     "atom-workspace": "expressjs:toggle"
