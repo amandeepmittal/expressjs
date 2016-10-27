@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle expressjs",
+        "command": "expressjs:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "expressjs",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "expressjs:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

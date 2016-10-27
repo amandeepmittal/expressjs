@@ -1,0 +1,190 @@
+#applicable to Express v4.x.x
+'.source.js':
+  #Methods
+  'app.all()':
+    'prefix':'aall'
+    'body':'''
+      app.all('${1:path}', function (req, res, next) {
+        $2
+      });
+    '''
+  'app.all() ES6':
+    'prefix':'aall6'
+    'body':'''
+      app.all('${1:path}',  (req, res, next) => {
+        $2
+      });
+    '''
+  "app.all('*')":
+    'prefix':'aall*'
+    'body':"""
+      app.all('*', function (req, res, next) {
+        $2
+      });
+    """
+  "app.all('*') ES6":
+    'prefix':'aall*6'
+    'body':"""
+      app.all('*', (req, res, next) => {
+        $2
+      });
+    """
+  'app.delete()':
+    'prefix':'adel'
+    'body':"""
+      app.del('${1:path}', function (req, res) {
+        $2
+      });
+    """
+  'app.delete() ES6':
+    'prefix':'adel6'
+    'body':"""
+      app.del('${1:path}', (req, res) => {
+        $2
+      });
+    """
+  'app.disable(name)':
+    'prefix':'adisable'
+    'body':"""
+      app.disable(${1:name});
+    """
+  'app.disabled(name)':
+    'prefix':'adisabled'
+    'body':"""
+      app.disabled(${1:name});
+    """
+  'app.enable(name)':
+    'prefix':'aenable'
+    'body':"""
+      app.enable(${1:name});
+    """
+  'app.enabled(name)':
+    'prefix':'aenabled'
+    'body':"""
+      app.enabled(${1:name});
+    """
+  'app.get()':
+    'prefix':'aget'
+    'body':"""
+      app.get('${1:path}', function (req, res) {
+        $2
+    });
+    """
+  'app.get() ES6':
+    'prefix':'aget6'
+    'body':"""
+      app.get('${1:path}', (req, res) => {
+        $2
+    });
+    """
+  'app.put()':
+    'prefix': 'aput'
+    'body': """
+    app.put('${1:path}', function (req, res) {
+        $2
+    });
+  """
+  'app.put() ES6':
+    'prefix': 'aput6'
+    'body': """
+    app.put('${1:path}',  (req, res) => {
+        $2
+    });
+  """
+  'app.listen()':
+    'prefix':'alisten'
+    'body':"""
+      app.listen(${1:port});
+    """
+  'app.listen() template':
+    'prefix':'alisten5'
+    'body':"""
+      app.listen(port, function () {
+        console.log('Server starts on ' + port);
+      });
+    """
+  'app.listen() ES6 template':
+    'prefix':'alisten6'
+    'body':"""
+      app.listen(port, function () {
+        console.log(`Server Starts on ${port}`);
+      });
+    """
+  'app.set(name, value)':
+    'prefix': 'aset'
+    'body': """
+      app.set('${1:name}', '${2:value}');
+    """
+  'app.use()':
+    'prefix':'ause'
+    'body':"""
+      app.use();
+    """
+  'res.json()':
+    "prefix": "rjson"
+    "body": """
+      res.json(${1:value});
+      });
+    """
+  'res.jsonp()':
+    "prefix": "rjsonp"
+    "body": """
+      res.jsonp(${1:value});
+      });
+    """
+  'res.redirect(state,path)':
+    "prefix": "rredirect"
+    "body": """
+      res.redirect(${1:state},'${2:path}');
+      });
+    """
+  'res.send()':
+    "prefix": "rsend"
+    "body": """
+      res.send(${1:value});
+      });
+    """
+  'res.sendStatus()':
+    "prefix": "rstatus"
+    "body": """
+      res.sendStatus(${1:value});
+      });
+    """
+  #initializing app variable
+  'var app = express();':
+    'prefix':'vapp'
+    'body': """
+      var app = express();
+    """
+  'const app = express();':
+    'prefix':'capp'
+    'body': """
+      const app = express();
+    """
+  #require express
+  'require express':
+    'prefix':'vexpress';
+    'body':"var express = require('express');"
+  'require express ES6':
+    'prefix':'cexpress';
+    'body':"const express = require('express');"
+
+  #Commonly Used Middleware
+  'helmet':
+    'prefix':'helmet'
+    'body':'app.use(helmet());'
+  'compression':
+    'prefix':'compress'
+    'body':'app.use(compression({level:zlib.Z_DEFAULT_COMPRESSION}));'
+  'bodyParser json':
+    'prefix':'bodyParserj'
+    'body':'app.use(bodyParser.json()); // for parsing application/json'
+  'bodyParser urlencoded':
+    'prefix':'bodyParserurl'
+    'body':'app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded'
+  'methodOverride':
+    'prefix':'methodOverride'
+    'body':"app.use(methodOverride('_method')); // methodOverride: override with POST having ?_method=DELETE"
+  'static file':
+    'prefix':'staticfile'
+    'body':"app.use(express.static('public'));"
