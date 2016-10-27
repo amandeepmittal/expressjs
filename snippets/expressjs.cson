@@ -68,14 +68,14 @@
     'body':"""
       app.get('${1:path}', function (req, res) {
         $2
-    });
+      });
     """
   'app.get() ES6':
     'prefix':'aget6'
     'body':"""
       app.get('${1:path}', (req, res) => {
         $2
-    });
+      });
     """
   'app.put()':
     'prefix': 'aput'
@@ -87,7 +87,7 @@
   'app.put() ES6':
     'prefix': 'aput6'
     'body': """
-    app.put('${1:path}',  (req, res) => {
+    app.put('${1:path}', (req, res) => {
         $2
     });
   """
