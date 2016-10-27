@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "expressjs:toggle"
   },
-  "repository": "https://github.com/atom/expressjs",
+  "repository": "https://github.com/amandeepmittal/expressjs",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
