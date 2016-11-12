@@ -118,7 +118,7 @@
   'app.use()':
     'prefix':'ause'
     'body':"""
-      app.use();
+      app.use($1);
     """
   'res.json()':
     "prefix": "rjson"
