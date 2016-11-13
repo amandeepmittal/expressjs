@@ -124,31 +124,26 @@
     "prefix": "rjson"
     "body": """
       res.json(${1:value});
-      });
     """
   'res.jsonp()':
     "prefix": "rjsonp"
     "body": """
       res.jsonp(${1:value});
-      });
     """
   'res.redirect(state,path)':
     "prefix": "rredirect"
     "body": """
       res.redirect(${1:state},'${2:path}');
-      });
     """
   'res.send()':
     "prefix": "rsend"
     "body": """
       res.send(${1:value});
-      });
     """
   'res.sendStatus()':
     "prefix": "rstatus"
     "body": """
       res.sendStatus(${1:value});
-      });
     """
   #initializing app variable
   'var app = express();':
