@@ -1,7 +1,7 @@
 {
   "name": "expressjs",
   "main": "./lib/expressjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of Expressjs snippets for Atom",
   "keywords": [
     "nodejs",
