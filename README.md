@@ -1,5 +1,9 @@
 # expressjs snippets
 
+[![apm](https://img.shields.io/apm/v/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
+[![apm](https://img.shields.io/apm/dm/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
+[![apm](https://img.shields.io/apm/l/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
+
 A collection of [Expressjs](http://expressjs.com) snippets for [Atom](http://atom.io)
 
 
