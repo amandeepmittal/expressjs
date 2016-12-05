@@ -32,14 +32,14 @@
   'app.delete()':
     'prefix':'adel'
     'body':"""
-      app.del('${1:path}', function (req, res) {
+      app.delete('${1:path}', function (req, res) {
         $2
       });
     """
   'app.delete() ES6':
     'prefix':'adel6'
     'body':"""
-      app.del('${1:path}', (req, res) => {
+      app.delete('${1:path}', (req, res) => {
         $2
       });
     """
@@ -74,6 +74,20 @@
     'prefix':'aget6'
     'body':"""
       app.get('${1:path}', (req, res) => {
+        $2
+      });
+    """
+  'app.post()':
+    'prefix':'apost'
+    'body':"""
+      app.post('${1:path}', function (req, res) {
+        $2
+      });
+    """
+  'app.post() ES6':
+    'prefix':'apost6'
+    'body':"""
+      app.post('${1:path}', (req, res) => {
         $2
       });
     """
