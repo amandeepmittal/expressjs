@@ -27,6 +27,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `aenable` app.enable()
 - `aenabled` app.enabled()
 - `aget` | `aget6` app.get()
+- `apost` | `apost6` app.apost()
 - `aput` | `aput6` app.put()
 - `alisten` | `alisten5` | `alisten6` app.listen()
 - `aset` app.set()
