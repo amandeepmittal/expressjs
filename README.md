@@ -37,6 +37,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `rredirect` res.redirect()
 - `rsend` res.send()
 - `rstatus` res.sendStatus()
+-  `router()` Router()
 
 #### Initializing `app` variable
 - `vapp` var app = express();
