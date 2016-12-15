@@ -178,6 +178,11 @@
     'prefix':'cexpress';
     'body':"const express = require('express');"
 
+  # router module
+  'Router()':
+    'prefix': 'router()'
+    'body': 'router = express.Router();'
+
   #Commonly Used Middleware
   'helmet':
     'prefix':'helmet'
