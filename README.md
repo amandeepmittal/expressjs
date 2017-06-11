@@ -35,6 +35,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `rjson` res.json()
 - `rjsonp` res.jsonp()
 - `rredirect` res.redirect()
+- `rrender` res.render()
 - `rsend` res.send()
 - `rstatus` res.sendStatus()
 -  `router()` Router()
@@ -46,6 +47,14 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 #### Requiring Express
 - `vexpress` var express = require('express');
 - `cexpress` const express = require('express');
+
+#### Requiring Mongoose
+- `vmongoose` var mongoose = require('mongoose');
+- `cmongoose` const mongoose = require('mongoose');
+
+#### Requiring Express-Session
+- `vsession` var session = require('express-session');
+- `csession` const session = require('express-session');
 
 #### Commonly used Middleware
 - `bodyParserj`  app.use(bodyParser.json());
