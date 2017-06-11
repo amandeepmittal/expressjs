@@ -62,4 +62,3 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 Pull requests for more snippets are welcome.
 
 Copyright (c) 2016 Aman Mittal
-
