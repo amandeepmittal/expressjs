@@ -185,8 +185,11 @@
 
   # router module
   'Router()':
-    'prefix': 'router()'
-    'body': 'router = express.Router();'
+    'prefix': 'vrouter()'
+    'body': 'var router = express.Router();'
+  'Router() ES6':
+    'prefix': 'crouter()'
+    'body': 'const router = express.Router();'
 
   #require mongoose
   'require mongoose':
