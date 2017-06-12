@@ -149,6 +149,11 @@
     "body": """
       res.redirect(${1:state},'${2:path}');
     """
+  'res.render()':
+    "prefix": "rrender"
+    "body": """
+      res.render(${1:path});
+    """
   'res.send()':
     "prefix": "rsend"
     "body": """
@@ -180,8 +185,27 @@
 
   # router module
   'Router()':
-    'prefix': 'router()'
-    'body': 'router = express.Router();'
+    'prefix': 'vrouter()'
+    'body': 'var router = express.Router();'
+  'Router() ES6':
+    'prefix': 'crouter()'
+    'body': 'const router = express.Router();'
+
+  #require mongoose
+  'require mongoose':
+    'prefix':'vmongoose';
+    'body':"var mongoose = require('mongoose');"
+  'require mongoose ES6':
+    'prefix':'cmongoose';
+    'body':"const mongoose = require('mongoose');"
+
+  #require express-session
+  'require express-session':
+    'prefix':'vsession';
+    'body':"var session = require('express-session');"
+  'require express-session ES6':
+    'prefix':'csession';
+    'body':"const session = require('express-session');"
 
   #Commonly Used Middleware
   'helmet':
