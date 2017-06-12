@@ -70,4 +70,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 ### Contribute
 Pull requests for more snippets are welcome.
 
+### Contributors
+* Rita Bradley PR[#1](https://github.com/amandeepmittal/expressjs/pull/1) | [Github](https://github.com/ritabradley)
+
 Copyright (c) 2016 Aman Mittal
