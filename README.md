@@ -57,13 +57,13 @@ _(es5 versions of methods that use keyword `function` in place of `=>` functions
 ### Requiring Express
 - `express` const express = require('express');
 
-#### Requiring Express-Session
+### Requiring Express-Session
 - `session` const session = require('express-session');
 
-### Commonly used Middleware
-- `bodyParserj`  app.use(bodyParser.json());
-- `bodyParserurl` app.use(bodyParser.urlencoded({extended: true}));
-- `methodOverride` app.use(methodOverride('method'));
+## Commonly used Middleware
+- `bodyparserj`  app.use(bodyParser.json());
+- `bodyparserurl` app.use(bodyParser.urlencoded({extended: true}));
+- `methodoverride` app.use(methodOverride('method'));
 - `staticfile` app.use(express.static('public'));
 - `compress` app.use(compression({level:zlib.Z_DEFAULT_COMPRESSION}));
 - `helmet` app.use(helmet());
@@ -79,4 +79,4 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 ## Contributors
 * Rita Bradley PR[#1](https://github.com/amandeepmittal/expressjs/pull/1) | [Github](https://github.com/ritabradley)
 
-Copyright (c) 2016 Aman Mittal
+Copyright (c) Aman Mittal
