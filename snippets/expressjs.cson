@@ -335,6 +335,14 @@
     'body':"const session = require('express-session');"
     'description':'require express-session package'
 
+   #require mongoose
+   'require mongoose':
+      'prefix':'vmongoose';
+      'body':"var mongoose = require('mongoose');"
+    'require mongoose ES6':
+      'prefix':'cmongoose';
+      'body':"const mongoose = require('mongoose');"
+
   #Commonly Used Middleware
   'helmet':
     'prefix':'helmet'
