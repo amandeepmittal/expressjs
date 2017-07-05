@@ -1,228 +1,367 @@
 #applicable to Express v4.x.x
 '.source.js':
-  #Methods
-  'app.all()':
-    'prefix':'aall'
+# Methods with Shorthands/Templates
+  'app.all() ES5':
+    'prefix':'aallf'
     'body':'''
       app.all('${1:path}', function (req, res, next) {
         $2
       });
     '''
-  'app.all() ES6':
-    'prefix':'aall6'
+    'description':'ES5 verion'
+
+  'app.all()':
+    'prefix':'aall'
     'body':'''
       app.all('${1:path}',  (req, res, next) => {
         $2
       });
     '''
-  "app.all('*')":
-    'prefix':'aall*'
-    'body':"""
-      app.all('*', function (req, res, next) {
-        $2
-      });
-    """
-  "app.all('*') ES6":
-    'prefix':'aall*6'
-    'body':"""
-      app.all('*', (req, res, next) => {
-        $2
-      });
-    """
-  'app.delete()':
-    'prefix':'adel'
+    'description':'This method is like the standard app.METHOD() methods, except it matches all HTTP verbs.'
+
+  'app.delete() ES5':
+    'prefix':'adelf'
     'body':"""
       app.delete('${1:path}', function (req, res) {
         $2
       });
     """
-  'app.delete() ES6':
-    'prefix':'adel6'
+    'description':'ES5 verion'
+
+  'app.delete()':
+    'prefix':'adel'
     'body':"""
       app.delete('${1:path}', (req, res) => {
         $2
       });
     """
+    'description':'Routes HTTP DELETE requests to the specified path with the specified callback functions.'
+
   'app.disable(name)':
     'prefix':'adisable'
     'body':"""
       app.disable(${1:name});
     """
+    'description':'Sets the Boolean setting name to false, where name is one of the properties from the app settings table.'
+    'descriptionMoreURL':'http://expressjs.com/en/4x/api.html#app.settings.table'
+
   'app.disabled(name)':
     'prefix':'adisabled'
     'body':"""
       app.disabled(${1:name});
     """
+    'description':'Returns true if the Boolean setting name is disabled (false), where name is one of the properties from the app settings table.'
+    'descriptionMoreURL':'http://expressjs.com/en/4x/api.html#app.settings.table'
+
   'app.enable(name)':
     'prefix':'aenable'
     'body':"""
       app.enable(${1:name});
     """
+    'description':'Sets the Boolean setting name to true, where name is one of the properties from the app settings table.'
+    'descriptionMoreURL':'http://expressjs.com/en/4x/api.html#app.settings.table'
+
   'app.enabled(name)':
     'prefix':'aenabled'
     'body':"""
       app.enabled(${1:name});
     """
-  'app.get()':
-    'prefix':'aget'
+    'description':'Returns true if the setting name is enabled (true), where name is one of the properties from the app settings table.'
+    'descriptionMoreURL':'http://expressjs.com/en/4x/api.html#app.settings.table'
+
+  'app.get() ES5':
+    'prefix':'agetf'
     'body':"""
       app.get('${1:path}', function (req, res) {
         $2
       });
     """
-  'app.get() ES6':
-    'prefix':'aget6'
+    'description':'ES5 verion'
+
+  'app.get()':
+    'prefix':'aget'
     'body':"""
       app.get('${1:path}', (req, res) => {
         $2
       });
     """
-  'app.post()':
-    'prefix':'apost'
+    'description':'Routes HTTP GET request.'
+
+  'app.post() ES5':
+    'prefix':'apostf'
     'body':"""
       app.post('${1:path}', function (req, res) {
         $2
       });
     """
-  'app.post() ES6':
-    'prefix':'apost6'
+    'description':'ES5 verion'
+
+  'app.post()':
+    'prefix':'apost'
     'body':"""
       app.post('${1:path}', (req, res) => {
         $2
       });
     """
+    'description':'Routes HTTP POST request.'
+
+  'app.put() ES5':
+    'prefix': 'aputf'
+    'body': """
+      app.put('${1:path}', function (req, res) {
+        $2
+      });
+    """
+    'description':'ES5 verion'
+
   'app.put()':
     'prefix': 'aput'
     'body': """
-    app.put('${1:path}', function (req, res) {
+      app.put('${1:path}', (req, res) => {
         $2
-    });
-  """
-  'app.put() ES6':
-    'prefix': 'aput6'
-    'body': """
-    app.put('${1:path}', (req, res) => {
-        $2
-    });
-  """
+      });
+    """
+    'description':'Routes HTTP PUT request.'
+
   'app.listen()':
-    'prefix':'alisten'
+    'prefix':'listen'
     'body':"""
       app.listen(${1:port});
     """
-  'app.listen() template':
-    'prefix':'alisten5'
+    'description':'Starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen()'
+
+  'app.listen() ES5 template':
+    'prefix':'alistenf'
     'body':"""
       app.listen(port, function () {
         console.log('Server starts on ' + port);
       });
     """
-  'app.listen() ES6 template':
-    'prefix':'alisten6'
+    'description':'ES5 Version Template of app.listen()'
+
+  'app.listen() template':
+    'prefix':'alisten'
     'body':"""
       app.listen(port, function () {
         console.log(`Server Starts on ${port}`);
       });
     """
+    'description':'Starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen()'
+
+    'app.route()':
+      'prefix':'aroute'
+      'body':'''
+        app.route('${1:route}')
+      '''
+      'description':'Returns an instance of a single route, which you can then use to handle HTTP verbs with optional middleware'
+
   'app.set(name, value)':
     'prefix': 'aset'
     'body': """
       app.set('${1:name}', '${2:value}');
     """
+    'description':'Assigns setting name to value, where name is one of the properties from the app settings table.'
+    'descriptionMoreURL':'http://expressjs.com/en/4x/api.html#app.settings.table'
+
   'app.use()':
     'prefix':'ause'
     'body':"""
       app.use($1);
     """
+    'description':'Mounts the specified middleware function or functions at the specified path'
+
   'res.json()':
     "prefix": "rjson"
     "body": """
       res.json(${1:value});
     """
+    'description':'Sends a JSON response'
+
   'res.jsonp()':
     "prefix": "rjsonp"
     "body": """
       res.jsonp(${1:value});
     """
-  'res.redirect(state,path)':
+    'description':'Sends a JSON response with JSONP support'
+
+  'res.redirect(state, path)':
     "prefix": "rredirect"
     "body": """
       res.redirect(${1:state},'${2:path}');
     """
+    'description':'Redirects to the URL derived from the specified path'
+
   'res.render()':
     "prefix": "rrender"
     "body": """
       res.render(${1:path});
     """
+    'description':'Renders a view and sends the rendered HTML string to the client'
+
   'res.send()':
     "prefix": "rsend"
     "body": """
       res.send(${1:value});
     """
-  'res.sendStatus()':
+    'description':'Sends the HTTP response'
+
+  'res.status()':
     "prefix": "rstatus"
     "body": """
-      res.sendStatus(${1:value});
+      res.status(${1:value});
     """
+    'description':'Sets the HTTP status for the response. It is a chainable alias of Node’s response.statusCode'
+
+  'res.status().send()':
+    "prefix": 'rss'
+    "body": """
+      res.status(${1:value}).send(${2:value});
+    """
+    'description':'res.status() chained with res.send()'
+
   #initializing app variable
-  'var app = express();':
-    'prefix':'vapp'
-    'body': """
-      var app = express();
-    """
   'const app = express();':
-    'prefix':'capp'
+    'prefix':'app'
     'body': """
       const app = express();
     """
+    'description':'initializing app variable'
+
   #require express
   'require express':
-    'prefix':'vexpress';
-    'body':"var express = require('express');"
-  'require express ES6':
-    'prefix':'cexpress';
+    'prefix':'express';
     'body':"const express = require('express');"
+    'description':'require Express package'
 
   # router module
   'Router()':
-    'prefix': 'vrouter()'
-    'body': 'var router = express.Router();'
-  'Router() ES6':
-    'prefix': 'crouter()'
+    'prefix': 'router()'
     'body': 'const router = express.Router();'
+    'description':'initializing Router module'
 
-  #require mongoose
-  'require mongoose':
-    'prefix':'vmongoose';
-    'body':"var mongoose = require('mongoose');"
-  'require mongoose ES6':
-    'prefix':'cmongoose';
-    'body':"const mongoose = require('mongoose');"
+  'router.all() ES5':
+    'prefix':'rallf'
+    'body':'''
+      router.all('${1:path}', function (req, res, next) {
+        $2
+      });
+    '''
+    'description':'ES5 verion'
+
+  'router.all()':
+    'prefix':'rall'
+    'body':'''
+      router.all('${1:path}',  (req, res, next) => {
+        $2
+      });
+    '''
+    'description':'This method is like the standard router.METHOD() methods, except it matches all HTTP verbs.'
+
+  'router.delete() ES5':
+    'prefix':'rdelf'
+    'body':"""
+      router.delete('${1:path}', function (req, res) {
+        $2
+      });
+    """
+    'description':'ES5 verion'
+
+  'router.delete()':
+    'prefix':'rdel'
+    'body':"""
+      router.delete('${1:path}', (req, res) => {
+        $2
+      });
+    """
+    'description':'Routes HTTP DELETE requests to the specified path with the specified callback functions.'
+
+  'router.get() ES5':
+    'prefix':'rgetf'
+    'body':"""
+      router.get('${1:path}', function (req, res) {
+        $2
+      });
+    """
+    'description':'ES5 verion'
+
+  'router.get()':
+    'prefix':'rget'
+    'body':"""
+      router.get('${1:path}', (req, res) => {
+        $2
+      });
+    """
+    'description':'Routes HTTP GET request.'
+
+  'router.post() ES5':
+    'prefix':'rpostf'
+    'body':"""
+      router.post('${1:path}', function (req, res) {
+        $2
+      });
+    """
+    'description':'ES5 verion'
+
+  'router.post()':
+    'prefix':'rpost'
+    'body':"""
+      router.post('${1:path}', (req, res) => {
+        $2
+      });
+    """
+    'description':'Routes HTTP POST request.'
+
+  'router.put() ES5':
+    'prefix': 'rputf'
+    'body': """
+      router.put('${1:path}', function (req, res) {
+        $2
+      });
+    """
+    'description':'ES5 verion'
+
+  'router.put()':
+    'prefix': 'rput'
+    'body': """
+      router.put('${1:path}', (req, res) => {
+        $2
+      });
+    """
+    'description':'Routes HTTP PUT request.'
 
   #require express-session
   'require express-session':
-    'prefix':'vsession';
-    'body':"var session = require('express-session');"
-  'require express-session ES6':
-    'prefix':'csession';
+    'prefix':'session';
     'body':"const session = require('express-session');"
+    'description':'require express-session package'
 
   #Commonly Used Middleware
   'helmet':
     'prefix':'helmet'
     'body':'app.use(helmet());'
+    'description':'Security level middleware'
+    'descriptionMoreURL':'https://github.com/helmetjs/helmet'
+  'morgan':
+    'prefix':'logger'
+    'body':'app.use(logger());'
+    'description':'loading the logger/morgan middleware'
   'compression':
     'prefix':'compress'
     'body':'app.use(compression({level:zlib.Z_DEFAULT_COMPRESSION}));'
+    'description':'Compression Middleware'
   'bodyParser json':
-    'prefix':'bodyParserj'
-    'body':'app.use(bodyParser.json()); // for parsing application/json'
+    'prefix':'bodyparserj'
+    'body':'app.use(bodyParser.json());'
+    'description':'for parsing application/json'
   'bodyParser urlencoded':
-    'prefix':'bodyParserurl'
-    'body':'app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded'
+    'prefix':'bodyparserurl'
+    'body':'app.use(bodyParser.urlencoded({extended: true}));'
+    'description':'for parsing application/x-www-form-urlencoded'
   'methodOverride':
-    'prefix':'methodOverride'
-    'body':"app.use(methodOverride('_method')); // methodOverride: override with POST having ?_method=DELETE"
+    'prefix':'methodoverride'
+    'body':"app.use(methodOverride('_method'));"
+    'description':'methodOverride: override with POST having ?_method=DELETE'
   'static file':
     'prefix':'staticfile'
-    'body':"app.use(express.static('public'));"
+    'body':"app.use(express.static(__dirname + '/public'));"
+    'description':'static file middleware'

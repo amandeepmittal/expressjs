@@ -1,4 +1,10 @@
-# expressjs snippets
+# Expressjs Snippets
+
+A collection of snippets for [Express.js](https://github.com/expressjs).
+To initiate, you can either use shorthand methods or type an express method and rest will be autocomplete.
+
+* Supports, es6 syntax.
+* Applicable upto Expressjs 4.x.x version.
 
 [![apm](https://img.shields.io/apm/v/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
 [![apm](https://img.shields.io/apm/dm/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
@@ -7,29 +13,28 @@
 A collection of [Expressjs](http://expressjs.com) snippets for [Atom](http://atom.io)
 
 
-This package also support some of the ES6 syntax.
+## Installation
+Go to `Settings > Install` and then search for `expressjs` under `Packages`.
 
-### How to Install?
-Go to `Settings > Install`
+After installing this package, please restart Atom Editor.
 
-and then search for `expressjs` under `Packages`.
-
-After installation of this package, restart Atom Editor.
-
-### Snippets
+## Snippets Usage
 These snippets are for daily use to avoid writing as much as it could the boilerplate code. If you like, to add yours, feel free to contribute.
 
-#### Common Express Methods:
-- `aall` | `aall6` | `aall*` | `aall*6` app.all()
-- `adel` | `adel6`  app.delete()
+### Common Express Methods:
+_(es5 versions of methods that use keyword `function` in place of `=>` functions are suffix by `f`)_
+- `aall` | `aallf` app.all()
+- `adel` | `adelf`  app.delete()
 - `adisable` app.disable()
 - `adisabled` app.disabled()
 - `aenable` app.enable()
 - `aenabled` app.enabled()
-- `aget` | `aget6` app.get()
-- `apost` | `apost6` app.apost()
-- `aput` | `aput6` app.put()
-- `alisten` | `alisten5` | `alisten6` app.listen()
+- `aget` | `agetf` app.get()
+- `apost` | `apostf` app.apost()
+- `aput` | `aputf` app.put()
+- `alisten` | `alistenf` app.listen() template
+- `listen` app.listen()
+- `aroute` app.route()
 - `aset` app.set()
 - `ause` app.use()
 - `rjson` res.json()
@@ -37,40 +42,41 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `rredirect` res.redirect()
 - `rrender` res.render()
 - `rsend` res.send()
-- `rstatus` res.sendStatus()
--  `vrouter()` | `crouter()` Router()
+- `rstatus` res.status()
+- `rss` res.status().send();
+-  `router()` express.Router()
+- `rget` | `rgetf` router.get()
+- `rpost` | `rpostf` router.apost()
+- `rput` | `rputf` router.put()
+- `rall` | `rallf` router.all()
+- `rdel` | `rdelf`  router.delete()
 
-#### Initializing `app` variable
-- `vapp` var app = express();
-- `capp` const app = express();
+### Initializing `app` variable
+- `app` const app = express();
 
-#### Requiring Express
-- `vexpress` var express = require('express');
-- `cexpress` const express = require('express');
-
-#### Requiring Mongoose
-- `vmongoose` var mongoose = require('mongoose');
-- `cmongoose` const mongoose = require('mongoose');
+### Requiring Express
+- `express` const express = require('express');
 
 #### Requiring Express-Session
-- `vsession` var session = require('express-session');
-- `csession` const session = require('express-session');
+- `session` const session = require('express-session');
 
-#### Commonly used Middleware
+### Commonly used Middleware
 - `bodyParserj`  app.use(bodyParser.json());
 - `bodyParserurl` app.use(bodyParser.urlencoded({extended: true}));
 - `methodOverride` app.use(methodOverride('method'));
 - `staticfile` app.use(express.static('public'));
 - `compress` app.use(compression({level:zlib.Z_DEFAULT_COMPRESSION}));
 - `helmet` app.use(helmet());
-
+- `logger` app.use(logger());
 
 ---
 
 ### Contribute
-Pull requests for more snippets are welcome.
+Pull requests for more snippets are welcome. If you like to add yours, feel free to contribute.
 
-### Contributors
+In lieu of a formal style guide, take care to maintain the existing coding style.
+
+## Contributors
 * Rita Bradley PR[#1](https://github.com/amandeepmittal/expressjs/pull/1) | [Github](https://github.com/ritabradley)
 
 Copyright (c) 2016 Aman Mittal
