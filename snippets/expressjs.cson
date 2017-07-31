@@ -187,7 +187,7 @@
   'res.redirect(state, path)':
     "prefix": "rredirect"
     "body": """
-      res.redirect(${1:state},'${2:path}');
+      res.redirect('${1:value}');
     """
     'description':'Redirects to the URL derived from the specified path'
 
