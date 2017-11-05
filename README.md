@@ -3,7 +3,7 @@
 A collection of snippets for [Express.js](https://github.com/expressjs).
 To initiate, you can either use shorthand methods or type an express method and rest will be autocomplete.
 
-* Supports, es6 syntax.
+* Supports es6 syntax.
 * Applicable upto Expressjs 4.x.x version.
 
 [![apm](https://img.shields.io/apm/v/expressjs.svg?style=flat-square)](https://atom.io/packages/expressjs)
